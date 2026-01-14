@@ -8,9 +8,11 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    hmr: {
-      overlay: false,
-    },
+    allowedHosts: [
+      "e7a4d38c8071.ngrok-free.app",
+      ".ngrok-free.app",
+      ".ngrok.io",
+    ],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
