@@ -47,10 +47,10 @@ export default function Header() {
         isScrolled ? "container mx-auto px-4 md:max-w-fit md:px-0" : "container mx-auto px-4"
       }`}>
         <nav
-          className={`flex items-center justify-between transition-all duration-500 ease-in-out ${
+          className={`flex items-center justify-between transition-all duration-500 ease-in-out bg-background rounded-xl border border-border shadow-lg ${
             isScrolled
-              ? "bg-background md:rounded-xl rounded-lg border border-border shadow-lg px-4 md:px-10 py-2 md:py-1 md:gap-10"
-              : "bg-transparent border-transparent px-0 py-2"
+              ? "px-4 md:px-10 py-2 md:py-1 md:gap-10"
+              : "px-4 md:px-10 py-3 md:py-2 md:gap-10"
           }`}
         >
           <a
@@ -79,10 +79,8 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className={`font-medium transition-all duration-500 ease-in-out cursor-pointer ${
-                  isScrolled 
-                    ? "text-sm text-foreground hover:text-primary" 
-                    : "text-base text-white hover:text-primary"
+                className={`font-medium text-foreground hover:text-primary transition-all duration-500 ease-in-out cursor-pointer ${
+                  isScrolled ? "text-sm" : "text-base"
                 }`}
               >
                 {item.label}
