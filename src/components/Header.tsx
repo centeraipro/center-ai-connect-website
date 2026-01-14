@@ -79,8 +79,10 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className={`font-medium hover:text-accent transition-all duration-500 ease-in-out cursor-pointer ${
-                  isScrolled ? "text-sm" : "text-base"
+                className={`font-medium transition-all duration-500 ease-in-out cursor-pointer ${
+                  isScrolled 
+                    ? "text-sm text-foreground hover:text-primary" 
+                    : "text-base text-white hover:text-primary"
                 }`}
               >
                 {item.label}
@@ -91,6 +93,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <ThemeToggle />
             
+            {/* TODO: Uncomment when login/app functionality is implemented
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -105,6 +108,7 @@ export default function Header() {
                 Ir a la App
               </Button>
             </motion.div>
+            */}
 
             {/* Mobile Menu Button */}
             <button
@@ -138,14 +142,16 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="block py-2 font-medium hover:text-accent transition-colors cursor-pointer"
+                  className="block py-2 font-medium hover:text-primary transition-colors cursor-pointer"
                 >
                   {item.label}
                 </a>
               ))}
+              {/* TODO: Uncomment when login/app functionality is implemented
               <Button onClick={() => navigate('/app')} className="w-full rounded px-4 h-10">
                 Ir a la App
               </Button>
+              */}
             </div>
           </motion.div>
         )}
