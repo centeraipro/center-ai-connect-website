@@ -1,4 +1,4 @@
-import centerAiLogo from "@/assets/center-ai-logo.jpeg";
+import logoLight from "@/assets/logo-light.png";
 
 export default function Footer() {
   return (
@@ -8,9 +8,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-4 mb-4">
               <img
-                src={centerAiLogo}
+                src={logoLight}
                 alt="Center AI Pro"
-                className="h-12 object-contain"
+                className="h-10 object-contain"
               />
             </div>
             <p className="text-sm text-muted-foreground">
