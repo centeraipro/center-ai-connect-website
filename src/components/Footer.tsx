@@ -1,3 +1,5 @@
+import centerAiLogo from "@/assets/center-ai-logo.jpeg";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background">
@@ -6,11 +8,10 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-4 mb-4">
               <img
-                src="/CenterIcon.svg"
+                src={centerAiLogo}
                 alt="Center AI Pro"
-                className="w-16 h-16"
+                className="h-12 object-contain"
               />
-              <span className="font-bold text-xl">Center AI Pro</span>
             </div>
             <p className="text-sm text-muted-foreground">
               © 2025 Center AI Pro
