@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
-import centerAiLogo from "@/assets/center-ai-logo.jpeg";
+import logoLight from "@/assets/logo-light.png";
 
 const navItems = [
   { label: "Características", href: "#features" },
@@ -62,10 +62,10 @@ export default function Header() {
             className="flex items-center gap-3 cursor-pointer"
           >
             <img
-              src={centerAiLogo}
+              src={logoLight}
               alt="Center AI Pro"
               className={`transition-all duration-500 ease-in-out object-contain ${
-                isScrolled ? "h-8" : "h-10"
+                isScrolled ? "h-10" : "h-12"
               }`}
             />
           </a>
