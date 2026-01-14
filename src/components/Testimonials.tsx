@@ -37,7 +37,7 @@ export default function Testimonials() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -54,7 +54,7 @@ export default function Testimonials() {
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             >
@@ -64,7 +64,7 @@ export default function Testimonials() {
                     className="text-lg mb-6 italic"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.5, delay: index * 0.15 + 0.3 }}
                   >
                     "{testimonial.quote}"
@@ -73,7 +73,7 @@ export default function Testimonials() {
                     className="flex items-center gap-4"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.4, delay: index * 0.15 + 0.5 }}
                   >
                     <Avatar className="w-12 h-12">
