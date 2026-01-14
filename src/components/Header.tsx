@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import centerAiLogo from "@/assets/center-ai-logo.jpeg";
 
 const navItems = [
   { label: "Características", href: "#features" },
@@ -61,15 +62,12 @@ export default function Header() {
             className="flex items-center gap-3 cursor-pointer"
           >
             <img
-              src="/CenterIcon.svg"
-              alt="Center AI"
-              className={`transition-all duration-500 ease-in-out ${
-                isScrolled ? "w-8 h-8" : "w-10 h-10"
+              src={centerAiLogo}
+              alt="Center AI Pro"
+              className={`transition-all duration-500 ease-in-out object-contain ${
+                isScrolled ? "h-8" : "h-10"
               }`}
             />
-            <span className={`font-bold text-lg transition-all duration-500 ease-in-out ${
-              isScrolled ? "opacity-0 w-0 overflow-hidden md:opacity-100 md:w-auto" : "opacity-100"
-            }`}>Center AI</span>
           </a>
 
           {/* Desktop Navigation */}
